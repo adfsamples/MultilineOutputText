@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="panelGridLayout" id="d1">
+        <af:form id="f1">
+            <af:decorativeBox id="db1">
+                <f:facet name="center">
+                    <af:panelHeader text="Displaying multi-line text inside a panelGridLayout" id="ph1">
+                        <af:panelGridLayout id="pgl1" inlineStyle="background-color:#eee;">
+                            <af:gridRow marginTop="10px" marginBottom="10px" id="gr1">
+                                <af:gridCell id="gc1" marginStart="10px" width="100px" halign="end">
+                                    <af:outputLabel value="Input" id="ol1"/>
+                                </af:gridCell>
+                                <af:gridCell id="gc2" marginStart="10px" marginEnd="10px">
+                                    <af:panelGroupLayout id="pgl2" layout="vertical">
+                                        <af:inputText id="it1" label="Input" rows="12" simple="true"
+                                                      placeholder="Add some multi-line text and click Update to display it below."
+                                                      contentStyle="width:340px;" value="#{pageFlowScope.text}"/>
+                                        <af:button text="Update" id="b_updt"/>
+                                    </af:panelGroupLayout>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow id="gr2" marginTop="10px" marginBottom="10px">
+                                <af:gridCell id="gc3" marginStart="10px" width="100px" halign="end">
+                                    <af:outputLabel value="Output" id="ol2"/>
+                                </af:gridCell>
+                                <af:gridCell id="gc4" marginStart="10px" marginEnd="10px">
+                                    <af:panelGroupLayout id="pgl3" layout="vertical" styleClass="FixedWidthContainer">
+                                        <af:outputText id="ot1" value="#{pageFlowScope.text}" partialTriggers="b_updt"
+                                                       styleClass="PreWrap"/>
+                                    </af:panelGroupLayout>
+                                </af:gridCell>
+                            </af:gridRow>
+                        </af:panelGridLayout>
+                    </af:panelHeader>
+                </f:facet>
+                <f:facet name="top"/>
+            </af:decorativeBox>
+        </af:form>
+    </af:document>
+</f:view>

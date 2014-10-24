@@ -1,0 +1,26 @@
+@charset "UTF-8";
+/**ADFFaces_Skin_File / DO NOT REMOVE**/
+@namespace af "http://xmlns.oracle.com/adf/faces/rich";
+@namespace dvt "http://xmlns.oracle.com/dss/adf/faces";
+
+.FixedWidth {
+    width: 340px;
+}
+
+.FixedWidthContainer {
+    display: block;
+    background-color: #ffb;
+    -tr-rule-ref: selector(".FixedWidth");
+}
+
+.PreWrap {
+    white-space: -moz-pre-wrap; /* Mozilla */
+    white-space: pre;           /* CSS 2.0 */
+    white-space: pre-wrap;      /* CSS 2.1 */
+    word-wrap: break-word;      /* IE 5.5-7 */
+}
+
+.FixedTableLayout af|panelFormLayout::column > table {
+    table-layout: fixed;
+    width: 100%;
+}
