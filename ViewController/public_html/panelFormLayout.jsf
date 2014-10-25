@@ -3,24 +3,22 @@
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
     <af:document title="panelFormLayout" id="d1">
         <af:form id="f1">
-            <af:decorativeBox id="db1">
-                <f:facet name="center">
-                    <af:panelHeader text="Displaying multi-line text inside a panelFormLayout" id="ph1">
-                        <af:panelFormLayout id="pfl1" labelWidth="100">
-                            <af:inputText id="it1" label="Input"
+            <af:pageTemplate viewId="/template.jsf" id="pt1">
+                <f:facet name="target">
+                    <af:panelHeader text="panelFormLayout" id="ph1">
+                        <af:panelFormLayout id="pfl1" labelWidth="100" fieldWidth="350">
+                            <af:inputText id="it1" label="inputText"
                                           placeholder="Add some multi-line text and click Update to display it below."
                                           contentStyle="width:340px;" rows="12" value="#{pageFlowScope.text}"/>
                             <af:button text="Update" id="b_updt"/>
-                            <af:panelLabelAndMessage id="plam1" label="Output" labelStyle="vertical-align:top">
-                                <af:panelGroupLayout id="pgl1" layout="vertical" styleClass="FixedWidthContainer">
-                                    <af:outputText id="ot1" value="#{pageFlowScope.text}" partialTriggers="b_updt"
-                                                   styleClass="PreWrap"/>
-                                </af:panelGroupLayout>
+                            <af:panelLabelAndMessage id="plam1" label="outputText" labelStyle="vertical-align:top">
+                                <af:outputText id="ot1" value="#{pageFlowScope.text}" partialTriggers="b_updt"
+                                               styleClass="PreWrap"/>
                             </af:panelLabelAndMessage>
                         </af:panelFormLayout>
                     </af:panelHeader>
                 </f:facet>
-            </af:decorativeBox>
+            </af:pageTemplate>
         </af:form>
     </af:document>
 </f:view>

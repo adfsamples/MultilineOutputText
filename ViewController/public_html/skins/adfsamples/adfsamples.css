@@ -9,8 +9,8 @@
 
 .FixedWidthContainer {
     display: block;
-    background-color: #ffb;
     -tr-rule-ref: selector(".FixedWidth");
+    background-color: #fbf;
 }
 
 .PreWrap {
@@ -23,4 +23,23 @@
 .FixedTableLayout af|panelFormLayout::column > table {
     table-layout: fixed;
     width: 100%;
+}
+
+/* visual hint for the demension of panelFormLayout and its content cell */
+af|panelFormLayout {
+    background-color: #eee;
+}
+
+.AFPanelFormLayoutContentCell,
+af|panelFormLayout::content-cell {
+    background-color: #ffb;
+}
+
+/* visual hint for the demension of panelGridLayout and gridCell */
+af|panelGridLayout {
+    background-color: #eee;
+}
+
+af|gridCell {
+    background-color: #ffb;
 }

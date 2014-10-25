@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE html>
+<f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <af:document title="panelGridLayout-gridCell" id="d1">
+        <af:form id="f1">
+            <af:pageTemplate viewId="/template.jsf" id="pt1">
+                <f:facet name="target">
+                    <af:panelHeader text="panelGridLayout-gridCell" id="ph1">
+                        <af:panelGridLayout id="pgl1">
+                            <af:gridRow marginTop="10px" height="auto" id="gr1">
+                                <af:gridCell marginStart="10px" width="320px" id="gc1" styleClass="af_gridCell">
+                                    <af:outputText value="gr1, gc1" id="ot1"/>
+                                </af:gridCell>
+                                <af:gridCell marginStart="10px" width="320px" marginEnd="10px" id="gc2"
+                                             styleClass="af_gridCell">
+                                    <af:outputText value="gr1, gc2" id="ot2"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                            <af:gridRow marginTop="10px" height="auto" marginBottom="10px" id="gr2">
+                                <af:gridCell marginStart="10px" width="320px" id="gc3" styleClass="af_gridCell">
+                                    <af:outputText value="gr2, gc3" id="ot3"/>
+                                </af:gridCell>
+                                <af:gridCell marginStart="10px" width="320px" marginEnd="10px" id="gc4"
+                                             styleClass="af_gridCell">
+                                    <af:outputText value="gr2, gc4" id="ot4"/>
+                                </af:gridCell>
+                            </af:gridRow>
+                        </af:panelGridLayout>
+                    </af:panelHeader>
+                </f:facet>
+            </af:pageTemplate>
+        </af:form>
+    </af:document>
+</f:view>

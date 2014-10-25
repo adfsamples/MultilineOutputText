@@ -1,18 +1,17 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <!DOCTYPE html>
 <f:view xmlns:f="http://java.sun.com/jsf/core" xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
-    <af:document title="panelGridLayout" id="d1">
+    <af:document title="panelGridLayout-fixedWidthContainer" id="d1">
         <af:form id="f1">
             <af:pageTemplate viewId="/template.jsf" id="pt1">
                 <f:facet name="target">
-                    <af:panelHeader text="panelGridLayout" id="ph1">
+                    <af:panelHeader text="panelGridLayout-fixedWidthContainer" id="ph1">
                         <af:panelGridLayout id="pgl1">
                             <af:gridRow marginTop="10px" marginBottom="10px" id="gr1">
                                 <af:gridCell id="gc1" marginStart="10px" width="100px" halign="end">
                                     <af:outputLabel value="inputText" id="ol1"/>
                                 </af:gridCell>
-                                <af:gridCell id="gc2" marginStart="10px" marginEnd="10px" width="340px"
-                                             styleClass="af_gridCell">
+                                <af:gridCell id="gc2" marginStart="10px" marginEnd="10px" styleClass="af_gridCell">
                                     <af:panelGroupLayout id="pgl2" layout="vertical">
                                         <af:inputText id="it1" label="inputText" rows="12" simple="true"
                                                       placeholder="Add some multi-line text and click Update to display it below."
@@ -25,10 +24,11 @@
                                 <af:gridCell id="gc3" marginStart="10px" width="100px" halign="end">
                                     <af:outputLabel value="outputText" id="ol2"/>
                                 </af:gridCell>
-                                <af:gridCell id="gc4" marginStart="10px" marginEnd="10px" width="340px"
-                                             styleClass="af_gridCell">
-                                    <af:outputText id="ot1" value="#{pageFlowScope.text}" partialTriggers="b_updt"
-                                                   styleClass="PreWrap"/>
+                                <af:gridCell id="gc4" marginStart="10px" marginEnd="10px" styleClass="af_gridCell">
+                                    <af:panelGroupLayout id="pgl3" layout="vertical" styleClass="FixedWidthContainer">
+                                        <af:outputText id="ot1" value="#{pageFlowScope.text}" partialTriggers="b_updt"
+                                                       styleClass="PreWrap"/>
+                                    </af:panelGroupLayout>
                                 </af:gridCell>
                             </af:gridRow>
                         </af:panelGridLayout>
